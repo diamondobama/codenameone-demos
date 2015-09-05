@@ -183,7 +183,8 @@ public class SignIn {
         }
         String name = (String) map.get("name");
         d.dispose();
-        Form userForm = new UserForm(name, (EncodedImage) theme.getImage("user.png"), "https://graph.facebook.com/v2.3/me/picture?access_token=" + token);
+        //Specify the image size required to get better quality image
+        Form userForm = new UserForm(name, (EncodedImage) theme.getImage("user.png"), "https://graph.facebook.com/v2.3/me/picture?width=256&height=256&access_token=" + token);
         userForm.show();
     }
 
